@@ -1,15 +1,20 @@
-console.log("hello connected")
 
-var time = new Date();
+function addZero(number) {
+    if (number < 10) {
+        return "0" + number;
+    } else {
+        return number;
+    }
+}
 
-let hours = time.getHours();
-let mints = time.getMinutes();
-// let sec = time.getSeconds();
+window.setInterval(function () {
+    var time = new Date();
 
-document.getElementById('hours').innerHTML = hours;
-document.getElementById('mins').innerHTML = mints;
+    let hours = time.getHours();
+    let mints = time.getMinutes();
+    let sec = time.getSeconds();
 
-
-let seconds = setInterval(function () {
-    document.getElementById('second').innerHTML = time.getSeconds();
+    document.getElementById('hours').innerHTML = addZero(hours);
+    document.getElementById('mins').innerHTML = addZero(mints);
+    document.getElementById('second').innerHTML = addZero(sec);
 }, 1000)
