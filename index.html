@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <title>Digital Clock </title>
 
 </head>
+
 <body>
     <div class="container">
         <div class="left-container">
@@ -40,7 +42,7 @@
                     <div class="child">
                         <img src="./image/lunch_time.svg" alt="image-error" class="svg-image">
                         <span class="time-set">Set Lunch time </span>
-                        <select name="wakeup" id="wakeup">
+                        <select name="lunch_time" id="lunchTime">
                             <option value="10AM - 11AM">1 AM - 2 AM</option>
                             <option value="10AM - 11AM">2 AM - 3 AM</option>
                             <option value="10AM - 11AM">3 AM - 4 AM</option>
@@ -60,7 +62,7 @@
                     <div class="child">
                         <img src="./image/nap_time.svg" alt="image-error" class="svg-image">
                         <span class="time-set">Set nap time time</span>
-                        <select name="wakeup" id="wakeup">
+                        <select name="nap_time" id="napTime">
                             <option value="10AM - 11AM">1 AM - 2 AM</option>
                             <option value="10AM - 11AM">2 AM - 3 AM</option>
                             <option value="10AM - 11AM">3 AM - 4 AM</option>
@@ -80,7 +82,7 @@
                     <div class="child">
                         <img src="./image/nap_time.svg" alt="image-error" class="svg-image">
                         <span class="time-set">Set night time</span>
-                        <select name="wakeup" id="wakeup">
+                        <select name="night_time" id="nightTime">
                             <option value="10AM - 11AM">1 AM - 2 AM</option>
                             <option value="10AM - 11AM">2 AM - 3 AM</option>
                             <option value="10AM - 11AM">3 AM - 4 AM</option>
@@ -100,12 +102,12 @@
                 <p id="msg">GOOD MORNING!! WAKE UP !!</p>
             </div>
             <div class="bottom-sec">
-                <button class="btn">Set Alarm</button>
+                <button class="btn" onclick="setAlarmTime()">Set Alarm</button>
                 <div class="set-time-list">
-                    <p class="detail-box">wake up time :<span>10AM - 11AM</span></p>
-                    <p class="detail-box">Lunch time :<span>10AM - 11AM</span></p>
-                    <p class="detail-box">Nap time :<span>10AM - 11AM</span></p>
-                    <p class="detail-box">Night time :<span>10AM - 11AM</span></p>
+                    <p class="detail-box">wake up time :<span id="wakeupTime">10AM - 11AM</span></p>
+                    <p class="detail-box">Lunch time :<span id="lunch">10AM - 11AM</span></p>
+                    <p class="detail-box">Nap time :<span id="nap">10AM - 11AM</span></p>
+                    <p class="detail-box">Night time :<span id="night">10AM - 11AM</span></p>
                 </div>
             </div>
         </div>
@@ -124,7 +126,7 @@
                     <div class="box">
                         <div class="center">
                             <p id="hours"> </p>
-                            <span>hours</span> 
+                            <span>hours</span>
                         </div>
                     </div>
                     <span class="dot">:</span>
@@ -159,4 +161,5 @@
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
